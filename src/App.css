@@ -1,0 +1,14 @@
+.body{
+  background-color: black;
+  height: auto;
+  width: auto;
+}
+
+.abc{
+  border-color: black;
+  color: blue;
+  background-color: aqua;
+  height: auto;
+  width: auto;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
