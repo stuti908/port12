@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.css';
 
 const Hero = () => {
@@ -18,8 +18,38 @@ const Hero = () => {
     alert("Let's get in touch!");
   };
 
+  // Typewriter effect
+  const introWords = ["Hello,", "I'm", "EKTA", "SAJWAN"];
+  const [displayedText, setDisplayedText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    if (wordIndex < introWords.length) {
+      const timeout = setTimeout(() => {
+        setDisplayedText((prev) => prev + (prev ? " " : "") + introWords[wordIndex]);
+        setWordIndex(wordIndex + 1);
+      }, 400);
+      return () => clearTimeout(timeout);
+    }
+  }, [wordIndex]);
+
   return (
     <section className="hero">
+      <div className="stars-layer">
+        {[...Array(40)].map((_, i) => (
+          <div
+            key={i}
+            className="star twinkle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDuration: `${Math.random() * 1 + 1.5}s`,
+              animationDelay: `${Math.random() * 5}s`,
+            }}
+          />
+        ))}
+      </div>
+
       <div className="top-right">
         <button className="resume-btn animate-delay-1" onClick={handleResumeClick}>
           RESUME
@@ -35,11 +65,13 @@ const Hero = () => {
         </button>
       </div>
 
-      <h1>
-        Hello, I'm <span className="highlight">EKTA SAJWAN</span>
-      </h1>
-      <p>A passionate Web Developer creating modern web experiences.</p>
-      <p>Working at PPS INTERNATIONAL as a GET (R&D)</p>
+      <div className="rectangle slide-in-left">
+        <div className="text">
+          <h1><span className="highlight">{displayedText}</span></h1>
+          <p className="fade-in">A passionate Developer creating modern digital experiences.</p>
+          <p className="fade-in delay">Working at PPS INTERNATIONAL as a GET (R&D)</p>
+        </div>
+      </div>
     </section>
   );
 };

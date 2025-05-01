@@ -1,9 +1,34 @@
 .hero {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #13131b;
+  background-color: #17171b;
   color: white;
   position: relative;
+  height: 250px;
+}
+
+.rectangle {
+  width: 380px;
+  height: 200px;
+  background-color: #10101600;
+  border-radius: 8px;
+  backdrop-filter: blur(15px); 
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  position: relative;
+  margin-top: 80px;
+  margin-left: 310px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.rectangle * {
+  position: relative; 
+  filter: none;
+}
+
+.text {
+  padding-top: 3%;
 }
 
 .hero .highlight {
@@ -24,6 +49,17 @@
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
     opacity: 0;
   }
   100% {
@@ -65,4 +101,55 @@
   font-style: italic;
   background: rgb(65, 114, 49);
   break-inside: auto;
+}
+
+.stars-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 5s infinite linear, twinkle 2s infinite ease-in-out;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) translateX(0);
+  }
+  100% {
+    transform: translateY(100vh) translateX(calc(100px * (random() - 0.5)));
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+/* Typewriter text fade-ins */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in forwards;
+  animation-delay: 2s;
+}
+
+.fade-in.delay {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
