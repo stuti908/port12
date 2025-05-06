@@ -20,12 +20,12 @@ const Footer = () => {
             <FaEnvelope style={{ color: '#d44638' }} />
           </a>
         </div>
-
+{/* 
         <div className="footer-links">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-        </div>
+        </div> */}
 
         <p className="copyright">
           &copy; 2025 EKTA . All rights reserved.
