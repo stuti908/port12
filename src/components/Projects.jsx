@@ -4,6 +4,8 @@ import './Projects.css';
 const projects = [
   { title: 'Portfolio Site', description: 'Personal portfolio using React.' },
   { title: 'E-Commerce App', description: 'Full-featured online store with cart and payments.' },
+  { title:  'CNS(collage navigation system )' , description: 'use in navigate clg campus library classes and etc '},
+  { title: 'HARDWARE-COMMUNICATION' , description: ' byte by byte communication in provided module with the help of RS485-232/UART protocol '}
 ];
 
 const Projects = () => {

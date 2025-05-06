@@ -4,38 +4,33 @@
   background-color: #17171b;
   color: white;
   position: relative;
-  height: 250px;
+  height: 230px;
 }
-
-.rectangle {
-  width: 380px;
-  height: 200px;
-  background-color: #10101600;
-  border-radius: 8px;
-  backdrop-filter: blur(15px); 
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  position: relative;
-  margin-top: 80px;
-  margin-left: 310px;
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1s ease-out forwards;
-}
-
-.rectangle * {
-  position: relative; 
-  filter: none;
-}
-
 .text {
-  padding-top: 3%;
+  padding-top: 5%;
 }
 
 .hero .highlight {
-  color: #86b2df;
+  color: #6ca2d8;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: initial;
 }
+.top-left {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  background-color: black;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-image: url(/public/imh.png);
+  background-size: cover; 
+  background-position: center; 
+}
+
 
 .top-right {
   position: absolute;
@@ -137,7 +132,8 @@
   50% { opacity: 1; }
 }
 
-/* Typewriter text fade-ins */
+
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 1.5s ease-in forwards;
@@ -152,4 +148,19 @@
   to {
     opacity: 1;
   }
+}
+
+.top-left.img1 {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid white;
+  opacity: 70%; 
+}
+
+.top-left.img1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

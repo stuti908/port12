@@ -18,8 +18,8 @@ const Hero = () => {
     alert("Let's get in touch!");
   };
 
-  // Typewriter effect
-  const introWords = ["Hello,", "I'm", "EKTA", "SAJWAN"];
+
+  const introWords = [ "I'm", "EKTA", "SAJWAN"];
   const [displayedText, setDisplayedText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -44,12 +44,13 @@ const Hero = () => {
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
               animationDuration: `${Math.random() * 1 + 1.5}s`,
-              animationDelay: `${Math.random() * 5}s`,
+              animationDelay: `${Math.random() * 6}s`,
             }}
           />
         ))}
       </div>
-
+      <div className="top-left">  
+      </div>
       <div className="top-right">
         <button className="resume-btn animate-delay-1" onClick={handleResumeClick}>
           RESUME
@@ -67,7 +68,7 @@ const Hero = () => {
 
       <div className="rectangle slide-in-left">
         <div className="text">
-          <h1><span className="highlight">{displayedText}</span></h1>
+          <h1> Hello!! <span className="highlight">{displayedText}</span></h1>
           <p className="fade-in">A passionate Developer creating modern digital experiences.</p>
           <p className="fade-in delay">Working at PPS INTERNATIONAL as a GET (R&D)</p>
         </div>
