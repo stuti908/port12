@@ -1,0 +1,45 @@
+.hire-container {
+    background: url('/bg.jpg') no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .hire-form {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .hire-form input {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 300px;
+  }
+  
+  .hire-form button {
+    background-color: green;
+    color: white;
+    padding: 12px 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 150px;
+  }
+  
+  .hire-quote {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+  }
+  

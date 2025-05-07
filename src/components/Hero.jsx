@@ -9,7 +9,10 @@ const Hero = () => {
   const handleProjectsClick = () => {
     window.scrollTo({ top: 800, behavior: 'smooth' });
   };
-
+  const handleDesignsClick = () => {
+    window.open('https://www.figma.com/design/W7L73DZ35bQVnbNHfArUS0/Untitled?node-id=0-1&t=yxhk86muU1HO1hEC-1', '_blank');
+  };
+  
   const handleContactClick = () => {
     window.scrollTo({ top: 1500, behavior: 'smooth' });
   };
@@ -58,10 +61,13 @@ const Hero = () => {
         <button className="resume-btn animate-delay-2" onClick={handleProjectsClick}>
           PROJECTS
         </button>
-        <button className="resume-btn animate-delay-3" onClick={handleContactClick}>
+        <button className="resume-btn animate-delay-3" onClick={handleDesignsClick}>
+          DESIGNS
+        </button>
+        <button className="resume-btn animate-delay-4" onClick={handleContactClick}>
           CONTACT ME
         </button>
-        <button className="resume-btn animate-delay-4" onClick={handleHireClick}>
+        <button className="resume-btn animate-delay-5" onClick={handleHireClick}>
           HIRE ME
         </button>
       </div>
