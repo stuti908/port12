@@ -1,34 +1,33 @@
 .about-container {
-  position: relative;
-  width: 100%;
+  background: url('/public/log121.jpg.jpg') no-repeat center center/cover;
   height: 100vh;
-  background-image: url('/public/log121.jpg.jpg'); 
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-}
-
-.overlay-panel {
-  width: 40%;
-  background: rgba(255, 255, 255, 0.85);
-  border-left: 4px solid #00aaff;
+  justify-content: center;
   padding: 2rem;
-  margin-left: 3rem;
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.overlay-panel h2 {
-  margin-bottom: 1rem;
-  font-family: 'Georgia', serif;
-}
-
-.overlay-panel p {
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 700px;
+  color: white;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   font-family: 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+}
+
+.glass-card h2 {
   margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.8rem;
+}
+
+.glass-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1rem;
 }
