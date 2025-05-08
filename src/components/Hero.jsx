@@ -16,20 +16,21 @@ const Hero = () => {
   const handleProjectsClick = () => {
     window.scrollTo({ top: 800, behavior: 'smooth' });
   };
+
   const handleDesignsClick = () => {
     window.open('https://www.figma.com/design/W7L73DZ35bQVnbNHfArUS0/Untitled?node-id=0-1&t=yxhk86muU1HO1hEC-1', '_blank');
   };
-  
+
   const handleContactClick = () => {
     window.scrollTo({ top: 1500, behavior: 'smooth' });
   };
-  
 
-
+  // Intro words for animation
   const introWords = [ "I'm", "EKTA", "SAJWAN"];
   const [displayedText, setDisplayedText] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
 
+  // useEffect hook to handle text animation with introWords dependency
   useEffect(() => {
     if (wordIndex < introWords.length) {
       const timeout = setTimeout(() => {
@@ -38,7 +39,7 @@ const Hero = () => {
       }, 400);
       return () => clearTimeout(timeout);
     }
-  }, [wordIndex]);
+  }, [wordIndex, introWords]); // Added introWords as a dependency
 
   return (
     <section className="hero">
@@ -56,7 +57,7 @@ const Hero = () => {
           />
         ))}
       </div>
-      <div className="top-left">  
+      <div className="top-left">
       </div>
       <div className="top-right">
         <button className="resume-btn animate-delay-1" onClick={handleResumeClick}>
