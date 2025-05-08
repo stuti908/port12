@@ -1,33 +1,61 @@
+/* Main container */
 .about-container {
-  background: url('/public/log121.jpg.jpg') no-repeat center center/cover;
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2rem;
+ display: flex;
+  overflow: hidden;
 }
 
+/* Background image with blur and reduced brightness */
+.about-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/public/log121.jpg.jpg') no-repeat center center/cover;
+  filter: brightness(0.6) blur(6px);
+  z-index: -1;
+}
+
+/* Glass card style */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.623);
   border-radius: 16px;
   padding: 2rem;
+  margin-top: 150px;
+  margin-left: 5px;
   width: 90%;
   max-width: 700px;
-  color: white;
+  color: rgb(12, 1, 1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
   font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
+/* Heading inside card */
 .glass-card h2 {
+  align-items: center;
+  margin-top: 0;
+  margin-left: 250px;
   margin-bottom: 1rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Paragraph inside card */
 .glass-card p {
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 1rem;
+  font-weight: 450;
 }

@@ -1,15 +1,7 @@
-
-import React, { useEffect } from 'react';
+import React from 'react';
 import './SplashScreen.css';
 
-const SplashScreen = ({ onComplete }) => {
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      onComplete();
-    }, 3000);
-    return () => clearTimeout(timer);
-  }, [onComplete]);
-
+const SplashScreen = () => {
   return (
     <div className="splash-container">
       <div className="stars-layer">

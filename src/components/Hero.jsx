@@ -1,7 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
+  const handleHireClick = () => {
+    navigate('/HireForm');
+  };
+
   const handleResumeClick = () => {
     window.open('/resume.pdf', '_blank');
   };
@@ -16,10 +23,7 @@ const Hero = () => {
   const handleContactClick = () => {
     window.scrollTo({ top: 1500, behavior: 'smooth' });
   };
-
-  const handleHireClick = () => {
-    alert("Let's get in touch!");
-  };
+  
 
 
   const introWords = [ "I'm", "EKTA", "SAJWAN"];

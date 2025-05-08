@@ -4,10 +4,13 @@
   background-color: #17171b;
   color: white;
   position: relative;
-  height: 230px;
+  height: 260px;
+  box-shadow: 0 40px 70px rgba(202, 196, 196, 0.774);
+
 }
 .text {
   padding-top: 5%;
+  
 }
 
 .hero .highlight {

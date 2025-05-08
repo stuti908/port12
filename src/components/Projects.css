@@ -2,13 +2,16 @@
   background-color: #fdfafa;
   color: rgb(10, 10, 10);
   padding: 3rem 2rem;
-  text-align: center;
+
 }
 
 .projects h2 {
-  font-size: 25px ;
-  margin-bottom: 1.5rem;
-  padding-right: 500px;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 570px;
+  font-size: 2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  align-items: center;
 }
 
 .carousel-container {
@@ -16,10 +19,10 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  gap: 1rem; 
+  gap: 12px; 
   padding: 2rem;
   scroll-padding: 0 50%; 
-  scrollbar-color: #837e7e transparent;
+  scrollbar-color: #c0babae0 transparent;
   scrollbar-width: thin;
   perspective: 1000px;
 }
